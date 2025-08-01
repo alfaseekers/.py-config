@@ -1,0 +1,80 @@
+# This is the global ruff configuration for all projects and CI pipelines.
+
+[lint]
+select = [
+    "F", # pyflakes
+    "E", # pycodestyle errors
+    "W", # pycodestyle warnings
+    "I", # isort
+    "N", # pep8-naming
+    "UP", # pyupgrade
+    "YTT", # flake8-2020
+    "ANN", #flake8-annotations
+    "ASYNC", # flake8-async
+    "S", # flake8-bandit
+    "BLE", # flake8-blind-except
+    "FBT", # flake8-boolean-trap
+    "B", # flake8-bugbear
+    "A", # flake8-builtins
+    "COM", # flake8-commas
+    "C4", # flake8-comprehensions
+    # "CPY", # flake8-copyright (no copyright needed)
+    "DTZ", # flake8-datetimez
+    # "DJ", # flake8-django (not using django)
+    "EM", # flake8-errmsg
+    "EXE", # flake8-executable
+    "FIX", # flake8-fixme
+    # "FA", # flake8-future-annotations (all annotations work on >py313)
+    "INT", # flake8-gettext
+    "ISC", # flake8-implicit-str-concat
+    "ICN", # flake8-import-conventions
+    "LOG", # flake8-logging
+    "G", # flake8-logging-format
+    "INP", # flake8-no-pep420
+    "PIE", # flake8-pie
+    # "T20", # flake8-print (we allow the usage of print)
+    "PYI", # flake8-pyi
+    "PT", # flake8-pytest-style
+    "Q", # flake8-quotes
+    "RSE", # flake8-raise
+    "RET", # flake8-return
+    "SLF", # flake8-self
+    "SIM", # flake8-simplify
+    "SLOT", # flake8-slots
+    "TID", # flake8-tidy-imports
+    "TD", # flake8-todos
+    "TC", # flake8-type-checking
+    "ARG", # flake8-unused-arguments
+    # "PTH", # flake8-use-pathlib (we allow the usage of os.path)
+    "FLY", # flynt
+    "C90", # mccabe
+    "NPY", # numpy-specific rules
+    "PD", # pandas-vet
+    "PERF", # perflint
+    "PLC", # pylint-convention
+    "PLE", # pylint-error
+    "PLR", # pylint-refactor
+    "PLW", # pylint-warning
+    "RUF", # ruff-specific rules
+    "TRY", # tryceratops
+]
+
+ignore = [ # https://docs.astral.sh/ruff/formatter/#conflicting-lint-rules
+    "W191", # tab-indentation
+    "E111", # indentation-with-invalid-multiple
+    "E114", # indentation-with-invalid-multiple-comment
+    "E117", # over-indented
+    "E501",  # line-too-long
+    "COM812", # missing-trailing-comma
+    "COM819", # prohibited-trailing-comma
+]
+
+[lint.flake8-quotes]
+inline-quotes = "single"
+multiline-quotes = "double"
+docstring-quotes = "double"
+
+[format]
+line-ending = "lf" # line endings will always be converted to \n
+quote-style = "single" # inline quote style
+skip-magic-trailing-comma = true # https://docs.astral.sh/ruff/settings/#format_skip-magic-trailing-comma
