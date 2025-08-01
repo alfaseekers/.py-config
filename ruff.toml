@@ -77,4 +77,3 @@ docstring-quotes = "double"
 [format]
 line-ending = "lf" # line endings will always be converted to \n
 quote-style = "single" # inline quote style
-skip-magic-trailing-comma = true # https://docs.astral.sh/ruff/settings/#format_skip-magic-trailing-comma
